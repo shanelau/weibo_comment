@@ -1,0 +1,25 @@
+{
+  "name": "weiboProject",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "description": "Just a blogging platform.",
+  "author": "Ghost Foundation",
+  "homepage": "http://ghost.org",
+  "keywords": [
+    "ghost",
+    "blog",
+    "cms"
+  ],
+  "engines": {
+    "node": "~0.10.0"
+  },
+  "dependencies": {
+    "async": "^0.9.0",
+    "lodash": "^2.4.1",
+    "request": "^2.42.0",
+    "when": "^3.4.6"
+  }
+}
