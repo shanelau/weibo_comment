@@ -1,7 +1,8 @@
 weibo_comment
 =============
 
-新浪微博的评论数据设备分析
+使用 nodejs 开发的 基于新浪微博开放平台的评论数据设备分析系统 
+
 
 ##  快速开始
 ```
@@ -10,12 +11,19 @@ node xx.js
 ```
 ## 注意
 1、  [授权机制](http://open.weibo.com/wiki/%E6%8E%88%E6%9D%83%E6%9C%BA%E5%88%B6)  
-访问新浪微博的数据接口需要 使用OAuth 2.0 的授权机制，获取到 access_token  
-详细:[授权机制](http://open.weibo.com/wiki/%E6%8E%88%E6%9D%83%E6%9C%BA%E5%88%B6)  
+访问新浪微博的数据接口需要 使用OAuth 2.0 的授权机制，获取到 access_token  详细:[授权机制](http://open.weibo.com/wiki/%E6%8E%88%E6%9D%83%E6%9C%BA%E5%88%B6)  
+
 我会在另外一篇博客介绍，非线上的环境怎么使用微博的认证授权机制，开发者在本地就可以访问微博API 
 
-如果你很急 需要一个 access_token，那就给我发邮件吧  kissliux@qq.com
-2、 关键字过滤
+如果你很急 需要一个 access_token，那就给我发邮件吧  kissliux@qq.com    
+
+2、 评论抓取的api
+
+```
+https://api.weibo.com/2/comments/show.json
+```
+
+3、 关键字过滤
 
 是否要过过滤出来一些评论
 ```
@@ -24,6 +32,7 @@ node xx.js
 ```
 
 ##  结果展示
+抓取了一条微博做测试，
 [罗永浩的一条微博](http://weibo.com/1640571365/BlchLDEkH?mod=weibotime)
 
 ```
@@ -114,14 +123,10 @@ node xx.js
 1  占比     0.08 %     华为Ascend手机
 1  占比     0.08 %     微博Win8客户端
 
+```
 
-
-
-
-
-
-包含1799 的评论
-
+## 评论包含1799统计
+```
 
 只看 魅族和小米的数据
 
@@ -174,8 +179,8 @@ node xx.js
 1  占比     0.29 %     三星Galaxy NOTE III
 1  占比     0.29 %     Flyme客户端
 1  占比     0.29 %     nubia Z5S mini
-####################
-包含1799的评论
+
+
 [ { userId: 'Noisy在成都', text: '1799', source: 'iPhone 5s' },
   { userId: '西尔赛斯', text: '1799秒杀你', source: 'iPhone 5s' },
   { userId: 'wengyao', text: 'mx4 1799', source: 'iPhone 5s' },
@@ -207,7 +212,7 @@ node xx.js
   { userId: '都敏君的爸比',
     text: '哈哈，老罗再关注8个人，你的关注人数就变1799了。[哈哈][哈哈]',
     source: 'iPhone 5s' } ]
+    
+    
+    还省略了很多很多。。。
 ```
-
-
-
